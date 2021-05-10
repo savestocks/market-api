@@ -29,6 +29,7 @@ func MapRoutes(e *echo.Echo) {
 	g.Use(BasicAuth)
 		
 	g.OPTIONS("/market",getDefaultOptions)	
+	g.OPTIONS("/market/:id",getDefaultOptions)	
 	g.GET("/market", GetMarketList)
 	g.GET("/market/:id", GetMarketByID)
 	g.POST("/market", SaveMarket)
